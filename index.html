@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejasree Taluri | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <h1>Tejasree Taluri </h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <img class="dp" src="images/tejuuu.png" alt="Your Picture">
+        <h2>About Me</h2>
+        <p>Hi, I'm Tejasree Taluri, a passionate programmer with expertise in Java, JavaScript, and MySQL. I'm currently pursuing Master’s degree in Computer Science, with over 2 years of experience as an Associate Software Engineer, specialized in designing, developing, and maintaining software solutions.</p>
+        
+    </section>
+
+    <section id="quickAccess">
+        <h2>Quick Access</h2>
+        <a href="www.linkedin.com/in/taluri" target="_blank" rel="noopener">
+            <img src="images/linkedinLogo2.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/ttaluri" target="_blank" rel="noopener">
+            <img src="images/github.png" alt="GitHub">
+        </a>
+        <a href="mailto:taluritejashree991@gmail.com">
+            <img src="images/emailLogo.png" alt="Gmail">
+        </a>
+        <a href="Resume-TejasreeTaluri.pdf" target="_blank"> 
+            <img src="images/resume2.png" alt="Resume">
+        </a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: ToDo List Web Application (JavaScript, React, Bootstrap, Node.js)</h3>
+            <p>Developed a dynamic To-Do List Web Application using React and Bootstrap that allows users to create, edit, and organize tasks. The application includes features such as moving tasks between lists and color-coded logic to highlight tasks based on their due date proximity. To ensure data reliability and seamless recovery, I refactored the backend API to serialize and persist tasks in a JSON file. By leveraging React’s state management with `useState` and implementing PUT/POST methods, I enhanced the user experience with responsive forms, enabling real-time task updates and seamless synchronization with the backend.</p>
+            <h3>GITHUB REPO</h3>
+            <a href="https://github.com/ttaluri/ToDoListWebApp" target="_blank" rel="noopener"> <img src="images/github.png" alt="GitHub" style="width: 50px; height: auto;"> </a>
+        </div>
+        <div class="project">
+            <h3>Project 2: Date/Time Calculator App (Java, Xml, Android Studio)</h3>
+            <p>Developed an Android mobile application using Java & xml that allows users to calculate new dates/times by adding or subtracting hours, days, weeks, or months from the current date. Designed responsive UI for both portrait and landscape orientations and maintained data persistence across device rotation, ensuring inputs, results, and history logs remain intact during orientation changes</p>
+            <h3>GITHUB REPO</h3>
+            <a href="https://github.com/ttaluri" target="_blank" rel="noopener"> <img src="images/github.png" alt="GitHub" style="width: 50px; height: auto;"> </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><h4>Programming Languages:</h4>Java, JavaScript, Object Oriented Programming (OOP), Data Structures</li>
+            <li><h4>Web Development:</h4>React.js, Node.js, Bootstrap, HTML, CSS, XML</li>
+            <li><h4>Databases:</h4>MySQL, SQL, PL/SQL, DBMS, Oracle</li>
+            <li><h4>Other:</h4>Linux, Microservices, GitHub, Spring framework, REST APIs, Postman tool, SQL, Software Development Lifecycle (SDLC), GraphQL</li>
+        
+        </ul>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="Resume-TejasreeTaluri.pdf" target="_blank"> <h4>Download</h4> <img src="images/resume2.png" alt="Resume" style="width: 70px; height: auto;"></a>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <section id="social">
+            <div class="social-icons">
+                <a href="www.linkedin.com/in/taluri" target="_blank" rel="noopener">
+                    <img src="images/linkedinLogo.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/ttaluri" target="_blank" rel="noopener">
+                    <img src="images/github.png" alt="GitHub">
+                </a>
+                <a href="mailto:taluritejashree991@gmail.com">
+                    <img src="images/emailLogo.png" alt="Gmail">
+                </a>
+            </div>
+        </section>
+        <div style="text-align: center; margin: 20px 0;">
+        <h2 style="text-align: center">Contact</h2>
+        <p class="contactEmailLogo">Email me at <h4><a href="mailto:taluritejashree991@gmail.com"> <img src="images/emailLogo.png" alt="Gmail" style="width: 60px; height: auto;"> </a> </h4> or fill out the form below:</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    </section>
+
+    <footer>
+        
+        <p>&copy; 2024 Tejasree Taluri. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
