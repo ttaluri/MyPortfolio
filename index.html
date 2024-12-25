@@ -4,13 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejasree Taluri | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(to bottom, #1A1110, #3D2B1F); /* Updated background */
+            color: lightgray; /* Updated text color */
+        }
+        header {
+            background: #e1562f;
+            color: rgb(227, 218, 218);
+            padding: 20px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffdbdb;
+        }
+        h1 {
+            margin: 0;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: lightgray; /* Updated color */
+        }
+
+        /* About Section */
+        #about {
+            text-align: center;
+        }
+        #about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #e06527ee;
+        }
+
+        /* Quick Access - Updated with buttons */
+        #quickAccess {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+        #quickAccess button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: rgb(212, 200, 200);
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px; /* Increased margin to add space */
+        }
+        #quickAccess .linkedin {
+            background-color: #0077b5; /* Blue button for LinkedIn */
+        }
+        #quickAccess .github {
+            background-color: #000000; /* Black button for GitHub */
+        }
+        #quickAccess .mail {
+            background-color: #b10c0cee; /* Red button for Mail */
+        }
+        #quickAccess .resume {
+            background-color: #3aafa9; /* Greenish color for Resume */
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background: #fec3a3; /* Softer background color for project cards */
+            color: #1e1919; /* Light grey color for text inside project cards */
+        }
+
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills Section */
+        #skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        #skills ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form input, form textarea, form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background: #f16d48; /* Updated button color */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #d74828;
+        }
+
+        .email-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adds space above the button */
+        }
+
+        .email-btn-container button {
+            margin: 0;
+            padding: 10px 20px;
+            background-color: #b10c0cee; /* Red button for Mail */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #E07A5F; /* Updated footer link color */
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <nav>
-            <h1>Tejasree Taluri </h1>
+            <h1>Tejasree Taluri</h1>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -23,83 +210,64 @@
 
     <!-- About Section -->
     <section id="about">
-        <img class="dp" src="images/tejuuu.png" alt="Your Picture">
+        <img src="images/tejuuu.png" alt="Your Picture">
         <h2>About Me</h2>
-        <p>Hi, I'm Tejasree Taluri, a passionate programmer with expertise in Java, JavaScript, and MySQL. I'm currently pursuing Master’s degree in Computer Science, with over 2 years of experience as an Associate Software Engineer, specialized in designing, developing, and maintaining software solutions.</p>
-        
+        <p>Hi, I’m Tejasree Taluri, a Master’s in Computer Science student with over 3 years of experience as an Associate Software Engineer. I specialize in designing, developing, and maintaining robust software solutions, leveraging my expertise in Java, JavaScript, SQL and more. Proficient with various technologies and tools, I thrive in Agile environments and collaborate effectively with teams to deliver high-quality, scalable software. I will graduate in March 2025 and am currently seeking full-time roles to further advance my career.</p>
     </section>
 
+    <!-- Quick Access Section -->
     <section id="quickAccess">
         <h2>Quick Access</h2>
-        <a href="https://www.linkedin.com/in/taluri/" target="_blank" rel="noopener">
-            <img src="images/linkedinLogo2.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/ttaluri" target="_blank" rel="noopener">
-            <img src="images/github.png" alt="GitHub">
-        </a>
-        <a href="mailto:taluritejashree991@gmail.com">
-            <img src="images/emailLogo.png" alt="Gmail">
-        </a>
-        <a href="Resume-TejasreeTaluri.pdf" target="_blank"> 
-            <img src="images/resume2.png" alt="Resume">
-        </a>
+        <div>
+            <a href="https://www.linkedin.com/in/taluri" target="_blank" rel="noopener">
+                <button class="linkedin">LinkedIn</button>
+            </a>
+            <a href="https://github.com/ttaluri" target="_blank" rel="noopener">
+                <button class="github">GitHub</button>
+            </a>
+            <a href="mailto:taluritejashree991@gmail.com">
+                <button class="mail">Mail</button>
+            </a>
+            <a href="Resume-TejasreeTaluri.pdf" target="_blank" rel="noopener">
+                <button class="resume">Resume</button>
+            </a>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1: ToDo List Web Application (JavaScript, React, Bootstrap, Node.js)</h3>
-            <p>Developed a dynamic To-Do List Web Application using React and Bootstrap that allows users to create, edit, and organize tasks. The application includes features such as moving tasks between lists and color-coded logic to highlight tasks based on their due date proximity. To ensure data reliability and seamless recovery, I refactored the backend API to serialize and persist tasks in a JSON file. By leveraging React’s state management with `useState` and implementing PUT/POST methods, I enhanced the user experience with responsive forms, enabling real-time task updates and seamless synchronization with the backend.</p>
-            <h3>GITHUB REPO</h3>
-            <a href="https://github.com/ttaluri/ToDoListWebApp" target="_blank" rel="noopener"> <img src="images/github.png" alt="GitHub" style="width: 50px; height: auto;"> </a>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>ToDo List Web Application</h3>
+                <p>Developed a dynamic To-Do List Web Application using React, Bootstrap, NodeJS and dotnet that allows users to create, edit, and organize tasks, with colors based on due date proximity</p>
+                <a href="https://github.com/ttaluri/ToDoListWebApp" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Date/Time Calculator Mobile App</h3>
+                <p>Implemented an Android Mobile Application using Java & XML that allows users to calculate new dates and times efficiently.</p>
+                <a href="https://github.com/ttaluri" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
         </div>
-        <div class="project">
-            <h3>Project 2: Date/Time Calculator App (Java, Xml, Android Studio)</h3>
-            <p>Developed an Android mobile application using Java & xml that allows users to calculate new dates/times by adding or subtracting hours, days, weeks, or months from the current date. Designed responsive UI for both portrait and landscape orientations and maintained data persistence across device rotation, ensuring inputs, results, and history logs remain intact during orientation changes</p>
-            <h3>GITHUB REPO</h3>
-            <a href="https://github.com/ttaluri" target="_blank" rel="noopener"> <img src="images/github.png" alt="GitHub" style="width: 50px; height: auto;"> </a>
-        </div>
+        <p>Above are two of my favorite projects from my coursework during my master's. Please check out my GitHub profile for more such projects</p>
     </section>
+
 
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li><h4>Programming Languages:</h4>Java, JavaScript, Object Oriented Programming (OOP), Data Structures</li>
-            <li><h4>Web Development:</h4>React.js, Node.js, Bootstrap, HTML, CSS, XML</li>
-            <li><h4>Databases:</h4>MySQL, SQL, PL/SQL, DBMS, Oracle</li>
-            <li><h4>Other:</h4>Linux, Microservices, GitHub, Spring framework, REST APIs, Postman tool, SQL, Software Development Lifecycle (SDLC), GraphQL</li>
-        
+            <li><strong>Programming Languages:</strong> Java, JavaScript, OOP, Data Structures and Algorithms</li>
+            <li><strong>Web Development:</strong> JavaScript, React.js, Node.js, Bootstrap, HTML, CSS, XML</li>
+            <li><strong>Databases:</strong> MySQL, SQL, PL/SQL, DBMS, Oracle</li>
+            <li><strong>Other:</strong> Linux, Microservices, GitHub, Spring framework, REST APIs, Postman tool </li>
         </ul>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="Resume-TejasreeTaluri.pdf" target="_blank"> <h4>Download</h4> <img src="images/resume2.png" alt="Resume" style="width: 70px; height: auto;"></a>
-    </section>
-
-
     <!-- Contact Section -->
     <section id="contact">
-        <section id="social">
-            <div class="social-icons">
-                <a href="www.linkedin.com/in/taluri" target="_blank" rel="noopener">
-                    <img src="images/linkedinLogo.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/ttaluri" target="_blank" rel="noopener">
-                    <img src="images/github.png" alt="GitHub">
-                </a>
-                <a href="mailto:taluritejashree991@gmail.com">
-                    <img src="images/emailLogo.png" alt="Gmail">
-                </a>
-            </div>
-        </section>
-        <div style="text-align: center; margin: 20px 0;">
-        <h2 style="text-align: center">Contact</h2>
-        <p class="contactEmailLogo">Email me at <h4><a href="mailto:taluritejashree991@gmail.com"> <img src="images/emailLogo.png" alt="Gmail" style="width: 60px; height: auto;"> </a> </h4> or fill out the form below:</p>
-        <form>
+        <h2>Contact</h2>
+        <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <label for="email">Email:</label>
@@ -108,15 +276,48 @@
             <textarea id="message" name="message"></textarea>
             <button type="submit">Send</button>
         </form>
-    </div>
+<br>
+        <div class="email-btn-container">
+            <a href="mailto:taluritejashree991@gmail.com">
+                <button class="mail">Send an eMail</button>
+            </a>
+        </div>
     </section>
 
     <footer>
-        
-        <p>&copy; 2024 Tejasree Taluri. All rights reserved.</p>
+        <p>&copy; 2024 <a href="#">Tejasree Taluri</a>. All rights reserved.</p>
     </footer>
-    
 
-    <script src="scripts.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+    
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+            };
+    
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert(result);
+                form.reset();
+            })
+            .catch(error => {
+                alert('Failed to send message, please try again later.');
+            });
+        });
+    </script>
+    
 </body>
 </html>
