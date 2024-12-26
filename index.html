@@ -116,14 +116,57 @@
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
-            background: #fec3a3; /* Softer background color for project cards */
-            color: #1e1919; /* Light grey color for text inside project cards */
+            background: #6e554798; /* Softer background color for project cards */
+            color: #d3cccc; /* Light grey color for text inside project cards */
         }
 
         
         .project-card:hover {
             transform: translateY(-5px);
         }
+
+        /* leetcode48 */
+        .lc-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .lc-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background: #6e554798; /* Softer background color for project cards */
+            color: #dad2d2; /* Light grey color for text inside project cards */
+        }
+
+        
+        .lc-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .lc-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;  /* This ensures that the image is centered inside the container */
+            margin-top: 20px;     /* Optional: Adjusts the top margin */
+        }
+        /* button*/
+        button {
+    padding: 10px 20px;
+    background-color: #e09a3fe4;  /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d8a641;  /* Darker green on hover */
+}
 
         /* Skills Section */
         #skills ul {
@@ -213,7 +256,7 @@
         <img src="images/tejuuu.png" alt="Your Picture">
         <h2>About Me</h2>
         <p>Hi, I’m Tejasree Taluri, a Master’s in Computer Science student with over 3 years of experience as an Associate Software Engineer. Specialized in developing, and maintaining software solutions, leveraging my expertise in Java, JavaScript, SQL and more.</p>
-        <p>I will be graduating in March 2025 and am currently seeking full-time Software Engineer/Developer roles to further advance my career.</p>
+        <p>I will graduate in March 2025 and am currently seeking full-time roles to further advance my career.</p>
     </section>
 
     <!-- Quick Access Section -->
@@ -241,17 +284,31 @@
         <div class="projects-container">
             <div class="project-card">
                 <h3>ToDo List Web Application</h3>
-                <p>Developed a dynamic To-Do List Web Application using React, Bootstrap, NodeJS and dotnet that allows users to create, edit, and organize tasks, with colors based on due date proximity</p>
-                <a href="https://github.com/ttaluri/ToDoListWebApp" target="_blank" rel="noopener">View on GitHub</a>
+                <p>Developed a dynamic To-Do List Web Application using React, Bootstrap, NodeJS, and .NET that allows users to create, edit, and organize tasks, with colors based on due date proximity.</p>
+                <button onclick="window.open('https://github.com/ttaluri/ToDoListWebApp', '_blank')">View on GitHub</button>
             </div>
             <div class="project-card">
                 <h3>Date/Time Calculator Mobile App</h3>
                 <p>Implemented an Android Mobile Application using Java & XML that allows users to calculate new dates and times efficiently.</p>
-                <a href="https://github.com/ttaluri" target="_blank" rel="noopener">View on GitHub</a>
+                <button onclick="window.open('https://github.com/ttaluri', '_blank')">View on GitHub</button>
             </div>
         </div>
-        <p>Above are two of my favorite projects from my coursework during my master's. Please check out my GitHub profile for more such projects</p>
+        <p>Above are two of my favorite projects from my coursework during my master's. Please check out my GitHub profile for more such projects.</p>
     </section>
+    
+    <section id="leetcode48">
+        <h2>My Leetcode 48</h2>
+        <div class="lc-container">
+            <div class="lc-card">
+                <p>Implemented a webpage, that contains curated LeetCode questions to quickly solve and revise during interview preparations.</p>
+                <button onclick="window.open('https://ttaluri.github.io/MyLeetCode48/', '_blank')">Take me there</button>
+            </div>
+        </div>
+        <div class="lc-image">
+            <img src="images/image.png" alt="LeetCode 48 Screenshot" style="width: 100%; max-width: 600px; margin-top: 20px;">
+        </div>
+    </section>
+    
 
 
     <!-- Skills Section -->
@@ -264,6 +321,9 @@
             <li><strong>Other:</strong> Linux, Microservices, GitHub, Spring framework, REST APIs, Postman tool </li>
         </ul>
     </section>
+
+
+
 
     <!-- Contact Section -->
     <section id="contact">
@@ -280,7 +340,7 @@
 <br>
         <div class="email-btn-container">
             <a href="mailto:taluritejashree991@gmail.com">
-                <button class="mail">Send an eMail</button>
+                <button class="mail">Send an e-mail</button>
             </a>
         </div>
     </section>
